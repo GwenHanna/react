@@ -6,11 +6,20 @@ export function NavBar() {
       <NavLink className="navbar-brand" to={"/home"}>
         home
       </NavLink>
+      <NavLink className="navbar-brand" to={"/morpion"}>
+        morpion
+      </NavLink>
       <NavLink className="navbar-brand" to={"/use-state"}>
         useState
       </NavLink>
       <NavLink className="navbar-brand" to={"/use-effect"}>
         useEffect
+      </NavLink>
+      <NavLink className="navbar-brand" to={"/use-memo"}>
+        useMemo
+      </NavLink>
+      <NavLink className="navbar-brand" to={"/use-ref"}>
+        useRef
       </NavLink>
     </nav>
   );
