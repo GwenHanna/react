@@ -1,8 +1,13 @@
 interface buttonInterface {
   value: string;
-  onClick?: (e: any) => any;
+  classname?: string;
+  onClick?: () => any;
 }
 
-export function ButtonCount(button: buttonInterface) {
-  return <button onClick={button.onClick}>{button.value}</button>;
+export function Button(button: buttonInterface) {
+  return (
+    <button className={button.classname} onClick={button.onClick}>
+      {button.value}
+    </button>
+  );
 }

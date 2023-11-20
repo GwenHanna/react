@@ -5,11 +5,11 @@ interface inputInterface {
   label: string;
   value?: any;
   id?: string;
-  onChange: (e: any) => void;
+  onChange: any;
 }
 
 export function Input(input: inputInterface) {
-  const [value, setValue] = useState<any>(input.value);
+  const [value, setValue] = useState<string>(input.value);
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
     setValue(e.target.value);

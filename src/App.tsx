@@ -2,7 +2,7 @@ import React, { ChangeEvent, useEffect, useMemo, useState } from "react";
 import "./App.css";
 import { Input } from "./components/form/input";
 import { Checkbox } from "./components/form/checkbox";
-import { ButtonCount } from "./components/buttons/btn-count";
+import { Button } from "./components/buttons/btn-count";
 import { log } from "console";
 import { routerConfig } from "./utils/router";
 import { Outlet, RouterProvider } from "react-router-dom";
