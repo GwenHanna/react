@@ -19,7 +19,7 @@ export function Input(input: inputInterface) {
     <div>
       <label>{input.label}</label>
       <input
-        className={flexColumn.join(" ")}
+        className={flexColumn}
         id={input.id}
         value={value}
         type="text"

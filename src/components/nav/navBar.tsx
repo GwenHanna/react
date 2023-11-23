@@ -1,26 +1,23 @@
 import { NavLink } from "react-router-dom";
+import { navDark } from "../../utils/design";
 
-export function NavBar() {
+interface itemNavInterface {
+  path: string;
+  name: string;
+}
+interface propsNavInterface {
+  props: itemNavInterface[];
+  className?: string;
+}
+
+export function NavBar({ props, className = navDark }: propsNavInterface) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <NavLink className="navbar-brand" to={"/home"}>
-        home
-      </NavLink>
-      <NavLink className="navbar-brand" to={"/morpion"}>
-        morpion
-      </NavLink>
-      <NavLink className="navbar-brand" to={"/use-state"}>
-        useState
-      </NavLink>
-      <NavLink className="navbar-brand" to={"/use-effect"}>
-        useEffect
-      </NavLink>
-      <NavLink className="navbar-brand" to={"/use-memo"}>
-        useMemo
-      </NavLink>
-      <NavLink className="navbar-brand" to={"/use-ref"}>
-        useRef
-      </NavLink>
+    <nav className={className}>
+      {props.map((item) => (
+        <NavLink className="navbar-brand" to={item.path} key={item.path}>
+          {item.name}
+        </NavLink>
+      ))}
     </nav>
   );
 }

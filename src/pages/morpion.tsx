@@ -1,4 +1,4 @@
-import Board from "../components/morpion/board";
+// import Game from "../components/morpion/game";
 
 export default function Morpion() {
   // let isNext: boolean = true;
@@ -6,7 +6,7 @@ export default function Morpion() {
   return (
     <>
       <h1>Morpion</h1>
-      <Board />
+      {/* <Game /> */}
     </>
   );
 }

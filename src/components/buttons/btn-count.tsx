@@ -4,10 +4,10 @@ interface buttonInterface {
   onClick?: () => any;
 }
 
-export function Button(button: buttonInterface) {
+export function Button({ value, classname, onClick }: buttonInterface) {
   return (
-    <button className={button.classname} onClick={button.onClick}>
-      {button.value}
+    <button className={classname} onClick={onClick}>
+      {value}
     </button>
   );
 }

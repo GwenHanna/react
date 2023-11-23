@@ -37,7 +37,7 @@ export default function Person() {
       <p>{person.age}</p>
 
       <Button
-        classname={button.join(" ")}
+        classname={button}
         value={"Ajouter une année"}
         onClick={addYears}
       />

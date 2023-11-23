@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-import UseState from "../pages/useState";
 import UseEffect from "../pages/useEffect";
 import Header from "../components/header/header";
 import Home from "../pages/home";
@@ -8,6 +7,9 @@ import Person from "../components/use-state/person";
 import Morpion from "../pages/morpion";
 import UseMemo from "../pages/useMemo";
 import UseRef from "../pages/useRef";
+import Exo from "../pages/exo";
+import ListComposant from "../components/list/list";
+import Interactif from "../pages/useState";
 
 export const routerConfig: any = createBrowserRouter([
   {
@@ -23,12 +25,22 @@ export const routerConfig: any = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "exo",
+        element: <Exo />,
+        children: [
+          {
+            path: "list",
+            element: <ListComposant />,
+          },
+        ],
+      },
+      {
         path: "morpion",
         element: <Morpion />,
       },
       {
-        path: "use-state",
-        element: <UseState />,
+        path: "interactif",
+        element: <Interactif />,
         children: [
           {
             path: "counter",

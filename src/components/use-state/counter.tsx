@@ -12,13 +12,9 @@ export default function Counter() {
   }
 
   return (
-    <div className={flexColumn.join(" ") + " col-2"}>
+    <div className={flexColumn + " col-2"}>
       <h3>Counter</h3>
-      <Button
-        classname={button.join(" ")}
-        value={"Incrémenter"}
-        onClick={counter}
-      />
+      <Button classname={button} value={"Incrémenter"} onClick={counter} />
       {count && count > 0 && count}
     </div>
   );
